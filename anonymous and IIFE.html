@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>anonymous and IIFE function</title>
+  </head>
+  <body>
+    <script>
+      //  Print odd numbers in an array
+
+      // anonmyus function
+      var odd = function (a) {
+        return a % 2 !== 0;
+      };
+      console.log(odd(5));
+
+      //  IIFE
+
+      (function oddnum(b) {
+        console.log(b % 2 !== 0);
+      })(8);
+      
+      //  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+      // Sum of all numbers in an array
+     
+      // anonmyus function
+      let add = function (a, b) {
+        return a + b;
+      };
+      console.log(add(2, 3));
+
+      // IIFE
+      (function sum(d, e) {
+        console.log(d + e);
+      })(5, 9);
+
+      //    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      // Return all the prime numbers in an array
+     
+      // anonmyus function
+
+      let n = function isPrimeNumber(n) {
+        for (var i = 2; i < n; i++) {
+          if (n % i === 0) return false;
+        }
+        return n > 1;
+      };
+      console.log(n(3));
+
+      // IIFE
+      (function PrimeNumber(n) {
+        for (var i = 2; i < n; i++) {
+          if (n % i === 0) return false;
+          return n > 1;
+          console.log(n);
+        }
+      })(6);
+
+    </script>
+  </body>
+</html>
